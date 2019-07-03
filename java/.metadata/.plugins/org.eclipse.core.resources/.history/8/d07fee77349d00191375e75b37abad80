@@ -10,27 +10,27 @@ public class testaVariaveis {
 		
 		idade = 20;
 		
-		System.out.println("A idade é " + idade);
+		System.out.println(idade);
 		
-		idade = ++idade;
+		idade = idade++;
 		
-		System.out.println("A idade é " + idade);
+		System.out.println(idade);
 		
 		idade = idade + 10;
 		
-		System.out.println("A idade é " + idade);
+		System.out.println(idade);
 		
 		idade = idade * 20;
 		
-		System.out.println("A idade é " + idade);
+		System.out.println(idade);
 		
 		idade = idade - 20;
 		
-		System.out.println("A idade é " + idade);
+		System.out.println(idade);
 		
 		idade = idade / 20;
 		
-		System.out.println("A idade é " + idade);
+		System.out.println(idade);
 		
 	}
 	

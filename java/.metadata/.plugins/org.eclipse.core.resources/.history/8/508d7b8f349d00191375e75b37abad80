@@ -14,7 +14,7 @@ public class testaVariaveis {
 		
 		idade = ++idade;
 		
-		System.out.println("A idade é " + idade);
+		System.out.println("A idade é " + dade);
 		
 		idade = idade + 10;
 		
