@@ -12,7 +12,7 @@ public class testaVariaveis {
 		
 		System.out.println("A idade é " + idade);
 		
-		idade = ++idade;
+		idade++;
 		
 		System.out.println("A idade é " + idade);
 		

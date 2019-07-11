@@ -1,0 +1,9 @@
+package sintaxeVariaveisFluxo;
+
+public class testaCaracters {
+
+		public static void main(String[] args) {
+			char letra = 'asddfsdd';
+			System.out.println(letra);
+		}
+}
