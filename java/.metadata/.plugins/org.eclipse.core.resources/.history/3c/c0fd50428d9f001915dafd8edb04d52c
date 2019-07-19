@@ -1,9 +1,0 @@
-package sintaxeVariaveisFluxo;
-
-public class testaCaracters {
-
-		public static void main(String[] args) {
-			char letra = 'a';
-			System.out.println(letra);
-		}
-}
