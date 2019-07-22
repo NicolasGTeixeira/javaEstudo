@@ -21,10 +21,12 @@ public class usandoMetodo {
 		contaB.numero = 123145654;
 		
 		// DEPOSITA
+		
 		 Transferencia.deposita(contaA, new BigDecimal(200));
 		 System.out.println(contaA.saldo);
 		
 		// SACA
+		 
 		 Transferencia.saca(contaA, new BigDecimal(200));
 		 System.out.println(contaA.saldo);
 		    
