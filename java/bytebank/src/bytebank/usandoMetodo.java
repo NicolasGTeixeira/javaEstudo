@@ -5,50 +5,42 @@ import java.math.BigDecimal;
 public class usandoMetodo {
 	
 	public static void main(String[] args) {
-		Conta usandoMetodo = new Conta();
 		
-		// Iniciando o saldo
+		// CONTA A
 		
-		usandoMetodo.saldo = new BigDecimal(200);
-		// System.out.println(usandoMetodo.saldo);
-		usandoMetodo.agencia = 4123;
-		usandoMetodo.numero = 83648763;
+		Conta contaA = new Conta();
+		contaA.saldo = new BigDecimal(200);
+		contaA.agencia = 4123;
+		contaA.numero = 83648763;
 		
-		// Deposita X reais
-		//usandoMetodo.deposita(new BigDecimal(400));
-		// System.out.println(usandoMetodo.saldo);
+		// CONTA B
 		
-		// Saca Y reais
-		// usandoMetodo.saca(new BigDecimal(50), usandoMetodo.saldo);
-		// System.out.println(usandoMetodo.saldo);
+		Conta contaB = new Conta();
+		contaB.saldo = new BigDecimal(500);
+		contaB.agencia = 4123;
+		contaB.numero = 123145654;
 		
-		// Transfere Conta X para a Conta Y
+		// DEPOSITA
+		 Transferencia.deposita(contaA, new BigDecimal(200));
+		 System.out.println(contaA.saldo);
 		
-		// Declarando e Iniciando Conta que vai receber a trânsferencia
-		
-		Conta contaRecebe = new Conta();
-		contaRecebe.saldo = new BigDecimal(500);
-        contaRecebe.agencia = 4123;
-        contaRecebe.numero = 123145654;
+		// SACA
+		 Transferencia.saca(contaA, new BigDecimal(200));
+		 System.out.println(contaA.saldo);
+		    
         
-        
-        
-        // Fazendo a transferencia
+        // TRANSFERE
         
         System.out.println("ANTES");
-        // contaRecebe.saldo = 500
-        // usandoMetodo.saldo = 200
-        System.out.println("Conta Recebe = " + contaRecebe.saldo);
-        System.out.println("Conta Transfere = " + usandoMetodo.saldo);
+        System.out.println("Conta Recebe = " + contaB.saldo);
+        System.out.println("Conta Transfere = " + contaA.saldo);
         System.out.println("============================");
         
-        usandoMetodo.transfere(new BigDecimal(100), usandoMetodo.saldo, contaRecebe.saldo);
+        Transferencia.transfere(contaA, contaB, new BigDecimal(100));
         
         System.out.println("DEPOIS");
-        // contaRecebe.saldo = 600
-        // usandoMetodo.saldo = 100
-        System.out.println("Conta Recebe = " + contaRecebe.saldo);
-        System.out.println("Conta Transfere = " + usandoMetodo.saldo);
+        System.out.println("Conta Recebe = " + contaB.saldo);
+        System.out.println("Conta Transfere = " + contaA.saldo);
         System.out.println("============================");
 	}
 }
