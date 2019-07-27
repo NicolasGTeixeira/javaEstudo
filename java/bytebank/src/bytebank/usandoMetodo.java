@@ -33,6 +33,7 @@ public class usandoMetodo {
         
         // TRANSFERE
         
+		System.out.println("============================");
         System.out.println("ANTES");
         System.out.println("Conta Recebe = " + contaB.saldo);
         System.out.println("Conta Transfere = " + contaA.saldo);
@@ -40,6 +41,7 @@ public class usandoMetodo {
         
         Transferencia.transfere(contaA, contaB, new BigDecimal(100));
         
+        System.out.println("============================");
         System.out.println("DEPOIS");
         System.out.println("Conta Recebe = " + contaB.saldo);
         System.out.println("Conta Transfere = " + contaA.saldo);

@@ -5,8 +5,17 @@ import java.math.BigDecimal;
 public class Transferencia {
 
 	public static void transfere(Conta ContaTransfere, Conta ContaRecebe, BigDecimal valor) {
-		if (ContaTransfere.validaSaldo(valor)) {
-			ContaTransfere.credita(valor);
+		
+		BigDecimal valorCredita;
+
+		if(!ContaTransfere.agencia.equals(ContaRecebe.agencia)) {
+			valorCredita = valor.add(new BigDecimal(2.75));	
+		} else {
+			valorCredita = valor;
+		}
+		
+		if (ContaTransfere.validaSaldo(valorCredita)) {
+			ContaTransfere.credita(valorCredita);
 			ContaRecebe.debita(valor);
 			System.out.println("TRANSFERENCIA REALIZADA COM SUCESSO");
 		} else {
